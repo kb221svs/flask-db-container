@@ -12,7 +12,7 @@ def get_connection():
         password="toor"
     )
 
-@app.route("/users", methods=["GET"])  # Виправлено пробіл
+@app.route("/users", methods=["GET"])  
 def get_users():
     try:
         conn = get_connection()
@@ -45,7 +45,7 @@ def add_user():
     except Exception as e:
         return str(e), 500
 
-@app.route("/users/<int:user_id>", methods=["DELETE"])  # Виправлено маршрут і логіку ID
+@app.route("/users/<int:user_id>", methods=["DELETE"])  
 def delete_user(user_id):
     try:
         conn = get_connection()
